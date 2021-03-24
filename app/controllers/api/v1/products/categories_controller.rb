@@ -2,7 +2,6 @@ module Api
   module V1
     module Products
       class CategoriesController < ApplicationController
-        layout nil
         def list
           @categories = ProductCategory.all
         end

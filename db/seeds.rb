@@ -3,7 +3,7 @@ require 'faker'
 Product.all.destroy_all
 ProductCategory.all.destroy_all
 
-5.times do |t|
+10.times do |t|
   ProductCategory.create(
     name: Faker::Food.ingredient
   )
@@ -12,7 +12,7 @@ end
 category_first = ProductCategory.first.id
 category_last = ProductCategory.last.id
 
-30.times do |t|
+100.times do |t|
   Product.create(
     sku: Faker::Code.asin,
     name: Faker::Food.dish,

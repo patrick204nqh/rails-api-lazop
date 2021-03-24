@@ -1,3 +1,19 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  namespace :api do
+    namespace :v1 do
+      namespace :products do
+        resources :products do
+          collection do
+            get 'list'
+          end
+        end
+        resources :categories do
+          collection do
+            get 'list'
+          end
+        end
+      end
+    end
+  end
 end
